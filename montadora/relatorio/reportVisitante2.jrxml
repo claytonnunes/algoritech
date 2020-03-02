@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportVisitante2" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1e6247fb-dda1-40c0-a15c-43317f7e96f1">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="dataset1" uuid="48a27f01-bb60-4a24-8e2f-d647100db573"/>
+	<queryString>
+		<![CDATA[SELECT
+     UPPER(nome),
+     visitantes.`cpf` AS visitantes_cpf,
+     visitantes.`website` AS visitantes_website,
+     visitantes.`observacao` AS visitantes_observacao,
+     visitantes.`celular` AS visitantes_celular
+FROM
+     `visitantes` visitantes
+ORDER BY
+     nome ASC]]>
+	</queryString>
+	<field name="UPPER(nome)" class="java.lang.String"/>
+	<field name="visitantes_cpf" class="java.lang.String"/>
+	<field name="visitantes_website" class="java.lang.String"/>
+	<field name="visitantes_observacao" class="java.lang.String"/>
+	<field name="visitantes_celular" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="132" y="0" width="555" height="67" uuid="1274091f-48c0-4490-9974-8a7d22dda83d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="32" isBold="true"/>
+				</textElement>
+				<text><![CDATA[VISITANTES]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement x="79" y="11" width="191" height="20" uuid="daeebbae-234c-40b9-9d86-b4cc52445181"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOME	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="270" y="11" width="170" height="20" uuid="a2294d48-ddbe-409c-9d47-bd43f59cb001"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[EMAIL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="440" y="11" width="100" height="20" uuid="e3e5b0f1-936b-46cc-af53-512e98970987"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CPF]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="651" y="11" width="93" height="20" uuid="b39560fd-53df-4d14-b579-0eb6a740b3a7"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[OBSERVAÇÃO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="540" y="11" width="111" height="20" uuid="9db4c697-9fa0-430e-a729-0bbadcfe1f51"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CELULAR]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="24" splitType="Stretch">
+			<textField>
+				<reportElement x="79" y="0" width="191" height="20" uuid="c5da77e4-5225-46be-b1ec-5cb29aaac42b"/>
+				<textFieldExpression><![CDATA[$F{UPPER(nome)}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="270" y="0" width="170" height="20" uuid="5dd64ce1-2628-434a-b656-779d7a5b8a76"/>
+				<textFieldExpression><![CDATA[$F{visitantes_website}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="440" y="0" width="100" height="20" uuid="2b342464-a9fc-42b6-8a9b-a086eb7ce8ab"/>
+				<textFieldExpression><![CDATA[$F{visitantes_cpf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="651" y="0" width="120" height="20" uuid="4ef4866e-9e12-4328-af8a-559df34a4aab"/>
+				<textFieldExpression><![CDATA[$F{visitantes_observacao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="540" y="0" width="111" height="20" uuid="82c44612-90d3-46d8-8693-c1d39a6b0b09"/>
+				<textFieldExpression><![CDATA[$F{visitantes_celular}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="63" y="16" width="708" height="1" uuid="6729ccfe-6417-4120-95c5-7c993305fd19"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="45" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Page not found - Alvi Pixels</title>
+</head>
+
+<body style="text-align:center; padding:25px; font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:18px;">
+<div><img src="images/logo-Alvi-Pixels.png" width="140" height="84" alt=""/></div>
+<div style="width:60%; margin:0 20% 0 20%;">
+  <h1>404 Error  </h1>
+  <p>This is because we have moved this page to a new location, please <a href="http://www.alvipixels.co.uk/">click here</a> to visit our home page and brows the website to find the desired page.</p>
+</div>
+
+</body>
+</html>

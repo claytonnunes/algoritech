@@ -1,0 +1,9 @@
+Options -Indexes
+    # Definir o tempo m�ximo de execucao do script para 5 horas (padr�o: 60s)  
+    php_value max_execution_time 18000
+
+    # Definir o tempo de expira��o de sessao para 5 horas (padr�o: 24 mins)
+    php_value session.cookie_lifetime 18000
+    php_value session.cache_expire 18000
+    php_value session.gc_maxlifetime 18000
+
