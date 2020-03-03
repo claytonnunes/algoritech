@@ -45,6 +45,10 @@ unset( $_SESSION['tipo_conta'] );
 
 ?>.
 <style>
+
+    div.a{
+      text-align: center;
+    } 
     .bkc_ground{
         background-color: #000000;
     }
@@ -93,27 +97,17 @@ unset( $_SESSION['tipo_conta'] );
           <a href=""> <img  width="300" src="img/algoritech_logo_vendas.png"> </a>
         </h3>
         <br/>
-                    <h2>Esqueceu a senha</h2>                  
+                    <div class="a">
+                    <h2 text-align: center;>Esqueceu a senha!</h2> </div>                
                   
-                  <input type="text" id="email" name="usuario['email']" class="form-control" placeholder="E-mail Ex: jose@cocacola.com" required style="margin-bottom: 10px;" />
-                  
-                  
-                  <input type="text" id="novo_usuario" name="novo_usuario" class="form-control" placeholder="Login (Nome de Usu�rio) Ex: josecarlos" required style="margin-bottom: 10px;" />
-                  
-                  <input type="password" id="senha" name="usuario['senha']" class="form-control" placeholder="Criar Senha" required style="margin-bottom: 10px;" /> 
-                  
+                  <input type="text" id="email" name="usuario['email']" class="form-control text-center"  placeholder="Seu Email!" required style="margin-bottom: 10px;" />
+                                   
                   <input type="hidden" id="tipo_acesso" name="usuario['tipo_acesso']" value="0"  class="form-control" />
                   <input type="hidden" id="tipo_conta" name="usuario['tipo_conta']" value="0"  class="form-control" />
                   <input type="hidden" id="status" name="usuario['status']" value="0"  class="form-control" />
                     <br>
                     
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" value="checkTermos" id="checkTermos" name="check_termos" required/>
-                            Sim, eu concordo com os <a href="#"><b>Termos de uso</b>.</a>
-                        </label>
-                    </div>
-                     <button class="btn btn-lg btn-primary btn-block" type="submit"onclick="validarCheck();" style="width: 300px; height: 40px;">Cadastrar</button>
+                    <button class="btn btn-lg btn-primary btn-block" type="submit"onclick="validarCheck();" style="width: 300px; height: 40px;">Enviar</button>
                      
                      
       </form>

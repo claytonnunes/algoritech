@@ -66,7 +66,9 @@ endif;
         <input type="password" id="senha" name="senha" class="form-control" placeholder="Senha" required >
         <div class="checkbox">
         
-          <label> <input type="checkbox" value="remember-me"> Lembrar Senha </label>
+          <label> <input type="checkbox" value="remember-me"> Lembrar Senha &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="esqueceusenha.php" onClick="$('#loginbox').hide(); $('#signupbox').show()">
+                                            Esqueceu sua senha!
+                                        </a></label>
           <!-- <a href="esqueceusenha.php" onClick="$('#loginbox').hide(); $('#signupbox').show()">
                                             Esqueceu a Senha!
                                        </a>-->
