@@ -1,1 +1,3 @@
-﻿ <a href="/">abrir</a>";
+﻿<?php
+echo "tenso!";
+?>
