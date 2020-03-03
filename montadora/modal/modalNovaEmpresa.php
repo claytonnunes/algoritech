@@ -1,4 +1,4 @@
-<!-- MODAL NOVO NEGÓCIO -->
+<!-- MODAL NOVO NEGï¿½CIO -->
 <div class="modal fade" id="modalNovaEmpresa" tabindex="-1" role="dialog" aria-labelledby="modalNovaEmpresaLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -10,19 +10,19 @@
             <form method="POST" action="<?php echo BASEURL."empresas/index.php?acao=salvarEmpresa" ?>" enctype="multipart/form-data">
             <div class="row">
                 <div class="form-group col-md-6">
-                    <label for="recipient-name" class="control-label">Nome Fantasia (Obrigatório)</label>
+                    <label for="recipient-name" class="control-label">Nome Fantasia (ObrigatÃ³rio)</label>
                     <input name="nome_fantasia" type="text" class="form-control" value="" required>
                 </div>
 				<div class="form-group col-md-6">
-                    <label for="recipient-name" class="control-label">Fone empresa (Obrigatório)</label>
+                    <label for="recipient-name" class="control-label">Fone empresa (ObrigatÃ³rio)</label>
                     <input name="fone" type="text" class="form-control" id="campoFONE2" value="" placeholder="(99) 9999-9999" required>
                 </div>
 				<div class="form-group col-md-6">
-                    <label for="recipient-name" class="control-label">Nome contato (Obrigatório)</label>
+                    <label for="recipient-name" class="control-label">Nome contato (ObrigatÃ³rio)</label>
                     <input name="contato['nome']" type="text" class="form-control" required>
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="recipient-name" class="control-label">Fone contato (Obrigatório)</label>
+                    <label for="recipient-name" class="control-label">Fone contato (ObrigatÃ³rio)</label>
                     <input name="fone2" type="text" class="form-control" id="campoFONE3" value="" placeholder="(99) 9999-9999" required>
                 </div>
             </div>
@@ -44,11 +44,11 @@
                     <input name="contato['instagram']" type="text" class="form-control" >
                 </div>
                 <div class="form-group col-md-4">
-                    <label for="recipient-name" class="control-label">Função contato</label>
+                    <label for="recipient-name" class="control-label">FunÃ§Ã£o contato</label>
                     <input name="contato['funcao']" type="text" class="form-control" >
                 </div>
                 <div class="form-group col-md-4">
-                    <label for="recipient-name" class="control-label">Razão social</label>
+                    <label for="recipient-name" class="control-label">RazÃ£o social</label>
                     <input name="empresa['razao_social']" type="text" class="form-control">
                 </div>
                 <div class="form-group col-md-4">
@@ -60,7 +60,7 @@
                     <input name="empresa['instagram']" type="text" class="form-control" >
                 </div>
                 <div class="form-group col-md-5">
-                    <label for="recipient-name" class="control-label">Endereço</label>
+                    <label for="recipient-name" class="control-label">EndereÃ§o</label>
                     <input name="empresa['endereco']" type="text" class="form-control" >
                 </div>
                 <div class="form-group col-md-4">

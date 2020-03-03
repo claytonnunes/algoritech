@@ -362,7 +362,7 @@
                     <a href="<?php echo BASEURL; ?>agenda/index.php?pg=agendas"><i class="fa fa-calendar"></i> Agendas</a>                
                 </button>
                 <button type="button" class="btn btn-link"> 
-                    <a href="<?php echo BASEURL; ?>funil/index.php?pg=funil" ><i class="fa fa-filter"></i> Neg?cios</a> 
+                    <a href="<?php echo BASEURL; ?>funil/index.php?pg=funil" ><i class="fa fa-filter"></i> Negócios</a> 
                 </button>
                 <button type="button" class="btn btn-link"> 
                     <a href="<?php echo BASEURL; ?>ganhos/index.php?pg=ganhos"><i class="fa fa-trophy"></i> Ganhos</a> 
@@ -377,10 +377,10 @@
                     <a href="<?php echo BASEURL; ?>produto2/index.php?pg=produtos&acao=pesquisaProduto"><i class="fa fa-shopping-cart"></i> Produtos</a> 
                 </button>
                 <button type="button" class="btn btn-link"> 
-                    <a href="<?php echo BASEURL; ?>log/index.php?pg=relatorios"><i class="fa fa-bar-chart-o"></i> relat?rios</a> 
+                    <a href="<?php echo BASEURL; ?>log/index.php?pg=relatorios"><i class="fa fa-bar-chart-o"></i> relatórios</a> 
                 </button>
                 <button type="button" class="btn btn-link"> 
-                    <a href="#<?php echo BASEURL; ?>funil/index.php?pg=funil"><i class="fa fa-gear"></i> Configura??es</a> 
+                    <a href="#<?php echo BASEURL; ?>funil/index.php?pg=funil"><i class="fa fa-gear"></i> Configurações</a> 
                 </button>
             </div>
         </div>

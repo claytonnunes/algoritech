@@ -17,7 +17,7 @@ require_once('../controller/notificacaoController.php');
 pesquisaNotificacao('id_pai', $_SESSION['id_pai'], 'usuario_notificado', $_SESSION['id_usuario'], 'status', '1');
 findConta();
 
-// SE NÃO RETORNAR CONTA, DIRECIONA PARA PAGINA DE CADASTRO DE CONTA
+// SE Nï¿½O RETORNAR CONTA, DIRECIONA PARA PAGINA DE CADASTRO DE CONTA
 if ($contas == false) :
 		header("location: ../home/index.php");
 
@@ -90,7 +90,7 @@ endif;
 							$explode = explode('-' ,$date);
 							$fim_evento = "".$explode[2]."/".$explode[1]."/".$explode[0];
 							$time= $date[1];						
-							echo $inicio_evento." à ".$fim_evento; 
+							echo $inicio_evento." Ã€ ".$fim_evento; 
 						
 							$data1 = date("Y-m-d");
 							$data2 = $evento["inicio_evento"];
@@ -102,7 +102,7 @@ endif;
 							if ($dias>0):
 								echo "<br> <font color='red'> FALTAM: ".$dias." DIAS </font>";
 							else:
-								echo "<br> <font color='red'> INAUGUROU À ".$dias." DIAS </font>";
+								echo "<br> <font color='red'> INAUGUROU Ã€ ".$dias." DIAS </font>";
 							endif;
 							
 							
@@ -114,7 +114,7 @@ endif;
         
          <?php endforeach;
 		
-	// SE NÃO TIVER EVENTO CADASTRADO, MOSTRA LINK DE CADASTRO
+	// SE Nï¿½O TIVER EVENTO CADASTRADO, MOSTRA LINK DE CADASTRO
 		else : ?>
        <hr />
 

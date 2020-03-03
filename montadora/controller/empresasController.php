@@ -16,7 +16,7 @@ function index_empresa() {
     $empresas = 	('empresas');
 }
 
-// PESQUISA USUÁRIO POR MODULO
+// PESQUISA USUï¿½RIO POR MODULO
 function pesquisaEmpresaId($coluna1 = null, $valor1 = null, $coluna2 = null, $valor2 = null, $coluna3 = null, $valor3 = null) {
 	global $empresas;
     $empresas = pesquisa_tres_colunas('empresas', $coluna1, $valor1, $coluna2, $valor2, $coluna3, $valor3);
@@ -153,6 +153,7 @@ function salvarDadosEmpresa(){
 		$empresa['cnpj'] = $cnpj;
 		$empresa['cep'] = $cep;
 		
+
 		$contato = $_POST['contato'];
         $contato['created'] = $today->format("Y-m-d H:i:s");
         $contato['modified'] = $contato['created'];
@@ -160,7 +161,8 @@ function salvarDadosEmpresa(){
 		$contato['id_created'] = $id_usuario;
 		$contato['fone2'] = $fone2;
 		$contato['celular'] = $celular;
-				
+			
+
 		$result = save_two('empresas', $empresa, 'contatos', $contato, 'id_empresa');
 		echo "<script>location.href='../empresas/index.php?filtro=nomeCliente&pg=cliente&PesquisaCliente=".$_REQUEST['nome_fantasia']."';</script>";		
 		
@@ -283,7 +285,7 @@ function editarEmpresa() {
 }
 
 /**
- *  Visualização de uma empresa
+ *  Visualizaï¿½ï¿½o de uma empresa
  */
 function visualizarEmpresa($id = null) {
     
@@ -299,7 +301,7 @@ function visualizarEmpresa($id = null) {
 
 
 /**
- *  Exclusão de uma empresa
+ *  Exclusï¿½o de uma empresa
  */
 function excluirEmpresa_backup($id = null) {
     global $empresa;
@@ -309,7 +311,7 @@ function excluirEmpresa_backup($id = null) {
 }
 
 /**
- *  Exclusão de uma empresa (sem eliminar o registro)
+ *  Exclusï¿½o de uma empresa (sem eliminar o registro)
  */
 function excluirEmpresa($id = null) {
     $now = date_create('now', new DateTimeZone('America/Recife'));

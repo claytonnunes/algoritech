@@ -29,10 +29,11 @@ session_start();
 
 	if (isset($_REQUEST['PesquisaCliente'])):
 				$nome_fantasia = $_REQUEST['PesquisaCliente'];			
+				echo $nome_fantasia;
 				$string=$nome_fantasia;
 				function tirarAcentos($string){
-					return preg_replace(array("/(·|‡|„|‚|‰)/","/(¡|¿|√|¬|ƒ)/","/(È|Ë|Í|Î)/","/(…|»| |À)/","/(Ì|Ï|Ó|Ô)/","/(Õ|Ã|Œ|œ)/","/(Û|Ú|ı|Ù|ˆ)/","/(”|“|’|‘|÷)/","/(˙|˘|˚|¸)/","/(⁄|Ÿ|€|‹)/","/(Ò)/","/(—)/","/(Á)/","/(«)/"),explode(" ","a A e E i I o O u U n N c C"),$string);
-				}
+					return preg_replace(array("/(√°|√†|√£|√¢|√§)/","/(√Å|√Ä|√É|√Ç|√Ñ)/","/(√©|√®|√™|√´)/","/(√â|√à|√ä|√ã)/","/(√≠|√¨|√Æ|√Ø)/","/(√ç|√å|√é|√è)/","/(√≥|√≤|√µ|√¥|√∂)/","/(√ì|√í|√ï|√î|√ñ)/","/(√∫|√π|√ª|√º)/","/(√ö|√ô|√õ|√ú)/","/(√±)/","/(√ë)/","/(√ß)/","/(√á)/"),explode(" ","a A e E i I o O u U n N c C"),$string);
+					}
 				$string = tirarAcentos($string);
 				findIdCompany($string);			
 			else:
@@ -103,7 +104,7 @@ session_start();
             			</td>
                       	<td class="actions text-right">
 						  <button type="button" class="btn btn-xs btn-success" data-toggle="modal" data-target="#modalNovoNegocio" 
-							data-send-id="<?php echo $empresa['id']; ?>"> <i class="fa fa-plus"></i> Novo negÛcio</button>
+							data-send-id="<?php echo $empresa['id']; ?>"> <i class="fa fa-plus"></i> Novo neg√≥cio</button>
 					  		<a href="#" class="btn btn-sm btn-info"><i class="fa fa-eye"></i> Visualizar</a>
                              <?php if($_SESSION['tipo_acesso']==0): ?>
                             <a href="edit.php?id=<?php echo $empresa['id']; ?>" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Editar</a>
@@ -131,7 +132,7 @@ session_start();
 	<?php include('../modal/modal-exclusao.php'); ?>
 	<?php include('../modal/modalNovoNegocio.php'); ?>
 	<?php include('../modal/modalNovaEmpresa.php'); ?>
-	<!-- SCRIPT PARA MODAL NOVO NEG”CIO -->
+	<!-- SCRIPT PARA MODAL NOVO NEGÔøΩCIO -->
 	<script type="text/javascript">
 		$('#modalNovoNegocio').on('show.bs.modal', function (event) {
 			var button = $(event.relatedTarget) 
