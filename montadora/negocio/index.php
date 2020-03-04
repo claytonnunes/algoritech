@@ -34,7 +34,7 @@ session_start();
              pesquisaNegocio('id',  $_REQUEST['id_negocio'], 'id_pai', $_SESSION['id_pai'], 'deleted', '0', 'ORDER BY id DESC');
         }
     }
-    // SE O LOGIN NÃO FOR ADMIN
+    // SE O LOGIN Nï¿½O FOR ADMIN
     else {
         if ($_REQUEST['id_negocio']=="indefinido") {
             pesquisaNegocio('id_usuario',  $_SESSION['id_usuario'], 'id_pai', $_SESSION['id_pai'], 'deleted', '0', 'ORDER BY id DESC LIMIT 1');
@@ -175,7 +175,7 @@ session_start();
 
     if(isset($_REQUEST['salvaratendimento'])):
 		if($_REQUEST['comentario']==""){		
-			$mensagem = "Escreva um comentário";		
+			$mensagem = "Escreva um comentÃ¡rio";		
 		}
 		else if($_REQUEST['proxima_data']==""){
 			$mensagem = "Selecione a proxima data";
@@ -185,7 +185,7 @@ session_start();
 			$mensagem = "Selecione o Evento";
 		}
 		else{
-			$mensagem = "Comentário registrada com sucesso";
+			$mensagem = "ComentÃ¡rio registrada com sucesso";
 			salvarAtendimento();
 		}
     endif;	
@@ -226,19 +226,19 @@ session_start();
     <!-- TITULO -->
     <div class="col-md-12">
 	    <div class="col-md-9">
-            <h5><?php echo "NEGÓCIO SELECIONADO: ".$nomeNegocio; ?></h5>
+            <h5><?php echo "NEGÃ“CIO SELECIONADO: ".$nomeNegocio; ?></h5>
         </div>
         <div class="dropdown col-md-2">
         <button class="btn btn-<?php echo $corPotencialVendas; ?> dropdown-toggle" type="button" data-toggle="dropdown"><i class="<?php echo $iconePotencialVendas; ?>"></i> Potencial vendas
             <span class="caret"></span></button>
             <ul class="dropdown-menu">
                 <li><a href="#">baixo</a></li>
-                <li><a href="#">médio</a></li>
+                <li><a href="#">mÃ©dio</a></li>
                 <li><a href="#">alto</a></li>
             </ul>
         </div>
         <div class="dropdown col-md-1">
-            <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">Ação
+            <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">AÃ§Ã£o
             <span class="caret"></span></button>
             <ul class="dropdown-menu">
                 <li><a href="index.php?acao=ganharNegocio&id_edicao=<?php  echo $_REQUEST['id_edicao']; ?>&id_atendimento=<?php echo $_REQUEST['id_atendimento']; ?>&id_empresa=<?php echo $_REQUEST['id_empresa']; ?>&id_negocio=<?php echo $_REQUEST['id_negocio']; ?>">Ganhar</a></li>
@@ -249,13 +249,13 @@ session_start();
         </div>
     </div>
 
-    <!-- PAINÉL NEGÓCIOS -->
+    <!-- PAINï¿½L NEGï¿½CIOS -->
     <div class="col-lg-4">
         <div class="panel panel-info">
             <div class="panel-heading">
-                <i class="fa fa-phone fa-fw"></i> NEGÓCIO
+                <i class="fa fa-phone fa-fw"></i> NEGÃ“CIO
                 <button type="button" class="btn btn-xs btn-success" data-toggle="modal" data-target="#modalNovoNegocio" 
-							data-send-id="<?php echo $idEmpresa; ?>"> <i class="fa fa-plus"></i> Novo negócio</button>
+							data-send-id="<?php echo $idEmpresa; ?>"> <i class="fa fa-plus"></i> Novo negÃ³cio</button>
             </div>
             <div class="panel-footer">
             <?php	
@@ -281,7 +281,7 @@ session_start();
             </div>
         </div>
 
-        <!-- PAINÉL EVENTO -->
+        <!-- PAINï¿½L EVENTO -->
         <div class="panel panel-info">
             <div class="panel-heading">
                 <i class="fa fa-bookmark fa-fw"></i> EVENTO
@@ -293,7 +293,7 @@ session_start();
             </div>
         </div>
 
-        <!-- PAINÉL EMPRESA -->
+        <!-- PAINï¿½L EMPRESA -->
         <div class="panel panel-warning">
             <div class="panel-heading">
                 <i class="fa fa-building"></i> EMPRESA 
@@ -305,7 +305,7 @@ session_start();
             </div>
         </div>
 
-        <!-- PAINÉL CONTATO -->
+        <!-- PAINï¿½L CONTATO -->
         <div class="panel panel-warning">
             <div class="panel-heading">
             <i class="glyphicon glyphicon-user"></i> CONTATO
@@ -330,7 +330,7 @@ session_start();
         </div>
     </div> 
 
-    <!-- PAINÉL DADOS DA NEGOCIAÇÃO -->
+    <!-- PAINï¿½L DADOS DA NEGOCIAï¿½ï¿½O -->
     <div class="col-lg-8">
         <div class="row">
             <div class="col-lg-12">
@@ -357,7 +357,7 @@ session_start();
                             </div>
                             <div class=" col-lg-3">
                                 <a href="#" class="list-group-item <?php echo $textoContrato; ?>">
-                                <i class="fa fa-trophy fa-fw"></i> Negociação 
+                                <i class="fa fa-trophy fa-fw"></i> NegociaÃ§Ã£o 
                                 <p><i class="fa fa-calendar"></i> 0 dias </p> 
                                 </a>
                             </div>
@@ -377,15 +377,15 @@ session_start();
                                     <p><?php echo $expectativaConclusao; ?></p>
                                 </div>
                                 <div class="col-md-2">
-                                    Duração
+                                    DuraÃ§Ã£o
                                     <p><?php echo $duracao." dias"; ?></p>
                                 </div>
                                 <div class="col-md-2">
-                                    Início
+                                    InÃ­cio
                                     <p><?php echo $dataInicioNegocio; ?></p>
                                 </div>
                                 <div class="col-md-2">
-                                    Atualização
+                                    AtualizaÃ§Ã£o
                                     <p><?php echo $dataAtualizacaoNegocio; ?></p>
                                 </div>
                                 <div class="col-md-2">
@@ -399,7 +399,7 @@ session_start();
             </div>
         </div>
 
-        <!-- PAINÉL CARACTERISTICAS DA NEGOCIAÇÃO -->
+        <!-- PAINï¿½L CARACTERISTICAS DA NEGOCIAï¿½ï¿½O -->
     
         <div class="row">
             <div class="col-lg-12">
@@ -427,11 +427,11 @@ session_start();
                             <hr>
                             <div class="row">
                                 <div class="col-md-3">
-                                    Localização
+                                    LocalizaÃ§Ã£o
                                     <p></p>
                                 </div>
                                 <div class="col-md-3">
-                                    Posição
+                                    PosiÃ§Ã£o
                                     <p><img src="../imagem/posicao01.png" alt="..." class="img-thumbnail"></p>
                                 </div>
                             </div>
@@ -441,16 +441,16 @@ session_start();
             </div>
         </div>
 
-        <!-- PAINÉL SUBMENU -->
+        <!-- PAINï¿½L SUBMENU -->
         <div class="col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-body">
                     <ul class="nav nav-tabs">
-                        <li class="active"><a href="#home" data-toggle="tab">Histórico</a>
+                        <li class="active"><a href="#home" data-toggle="tab">HistÃ³rico</a>
                         </li>
                         <li><a href="#briefing" data-toggle="tab">Briefing</a>
                         </li>
-                        <li><a href="#messages" data-toggle="tab">Cotação</a>
+                        <li><a href="#messages" data-toggle="tab">CotaÃ§Ã£o</a>
                         </li>
                         <li><a href="#contrato" data-toggle="tab">Contrato</a>
                         </li>
@@ -465,11 +465,11 @@ session_start();
                             <div id="divConteudo2">
                             <div class="col-lg-12" align="right">
                             <a href="#agenda" class="btn btn-sm btn-success" data-toggle="tab"><i class="fa fa-plus fa-1x"></i> Tarefa</a>
-                            <a href="#anotacao" class="btn btn-sm btn-info" data-toggle="tab"><i class="fa fa-plus fa-1x"></i> Anotação</a>
+                            <a href="#anotacao" class="btn btn-sm btn-info" data-toggle="tab"><i class="fa fa-plus fa-1x"></i> AnotaÃ§Ã£o</a>
                             </div>     
                             <div class="col-lg-12">
                                     <div class="col-lg-3">Data tarefa</div>
-                                    <div class="col-lg-7">Anotação</div>
+                                    <div class="col-lg-7">AnotaÃ§Ã£o</div>
                                     <div class="col-lg-2">Status</div>
                                         <?php 
                                         if ($agendas) : 
@@ -489,10 +489,10 @@ session_start();
                                                     $situacao = "<i class='fa fa-envelope fa-fw'></i>"; // email
                                                 }
                                                 else if ($situacao==3){
-                                                    $situacao = "<i class='fa fa-beer fa-fw'></i>"; // reunião
+                                                    $situacao = "<i class='fa fa-beer fa-fw'></i>"; // reuniï¿½o
                                                 }
                                                 else if ($situacao==9){
-                                                    $situacao = "<i class='fa fa-edit fa-fw'></i>"; // anotação
+                                                    $situacao = "<i class='fa fa-edit fa-fw'></i>"; // anotaï¿½ï¿½o
                                                 }
                                                 else{
                                                     $situacao = "Indefinido"; 
@@ -535,7 +535,7 @@ session_start();
                         <div class="tab-pane fade" id="agenda">
                             <form id="formEmpresa" name="formEmpresa" action="index.php?acao=salvarTarefa&id_empresa=<?php echo $_REQUEST['id_empresa'];?>&id_negocio=<?php echo $_REQUEST['id_negocio'];?>&id_edicao=<?php echo $_REQUEST['id_edicao'];?>" method="post">
                                 <div class="form-group col-md-12">
-                                    <textarea class="form-control" id="exampleTextarea" name="tarefa['comentario']" placeholder="Descreva o seu comentário..." required ></textarea>
+                                    <textarea class="form-control" id="exampleTextarea" name="tarefa['comentario']" placeholder="Descreva o seu comentï¿½rio..." required ></textarea>
                                 </div>
                                 <div class="form-group col-md-6">
                                     <div class="input-group date">
@@ -547,7 +547,7 @@ session_start();
                                     <option value="" selected>Selecione a tarefa</option>
                                     <option value="1">Ligar</option>
                                     <option value="2">Enviar e-mail</option>
-                                    <option value="3">Reunião</option>
+                                    <option value="3">ReuniÃ£o</option>
                                     </select>  
                                 </div>
                                 <div class="row">
@@ -558,11 +558,11 @@ session_start();
                             </form>
                         </div>  
                         
-                        <!-- MENU ANOTAÇÃO -->
+                        <!-- MENU ANOTAï¿½ï¿½O -->
                         <div class="tab-pane fade" id="anotacao">
                             <form id="formEmpresa" name="formEmpresa" action="index.php?acao=salvarAnotacao&id_empresa=<?php echo $_REQUEST['id_empresa'];?>&id_negocio=<?php echo $_REQUEST['id_negocio'];?>&id_edicao=<?php echo $_REQUEST['id_edicao'];?>" method="post">
                                 <div class="form-group col-md-12">
-                                    <textarea class="form-control" id="exampleTextarea" name="tarefa['comentario']" placeholder="Descreva o seu comentário..." required ></textarea>
+                                    <textarea class="form-control" id="exampleTextarea" name="tarefa['comentario']" placeholder="Descreva o seu comentï¿½rio..." required ></textarea>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12">
@@ -605,7 +605,7 @@ session_start();
       <div class="modal-header">
         <h4 class="modal-title" id="myModalLabel">Novo Contato
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">×</span>
+          <span aria-hidden="true">Ã€</span>
         </button>
         </h4>
       </div>
@@ -659,7 +659,7 @@ session_start();
 </div>
 </form>
 
-<!-- SCRIPT PARA MODAL NOVO NEGÓCIO -->
+<!-- SCRIPT PARA MODAL NOVO NEGï¿½CIO -->
 <?php include('../modal/modalNovoNegocio.php'); ?>
 <script type="text/javascript">
 		$('#modalNovoNegocio').on('show.bs.modal', function (event) {
@@ -671,14 +671,14 @@ session_start();
 		})
 </script>
 
-<!-- SCRIPT PARA MODAL NOVO NEGÓCIO -->
+<!-- SCRIPT PARA MODAL NOVO NEGï¿½CIO -->
 <?php include('../modal/modalNovoCusto.php'); ?>
 <script type="text/javascript">
 		$('#modalNovoCusto').on('show.bs.modal', function (event) {
 			var button = $(event.relatedTarget) 
 			var id = button.data('send-id') 
 			var modal = $(this)
-			modal.find('.modal-title').text('Codigo do negócio: ' + id)
+			modal.find('.modal-title').text('Codigo do negÃ³cio: ' + id)
 			modal.find('#get-id').val(id)
 		})
 </script>
