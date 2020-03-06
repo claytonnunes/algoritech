@@ -9,8 +9,9 @@
       </div>
       
       <div class="modal-body">
-
+      <form method="POST" action="processa.php" enctype="multipart/form-data">
         <div class="row">
+        <input type="hidden" class="form-control" name="id" value="<?php echo $empresa['id']; ?>">
         <div class="form-group col-md-6">
                 <label for="name">Nome Fantasia</label>
                 <input type="text" class="form-control" name="nome_fantasia" id="nome_fantasia" value="<?php echo $empresa['nome_fantasia']; ?>">
@@ -94,12 +95,13 @@
             
             </div>
         </div>
-    </form>
+    
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
         <button type="submit" class="btn btn-primary">Salvar</button>
       </div>
     </div>
+    </form>
   </div>
 </div>
