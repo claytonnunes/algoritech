@@ -8,13 +8,20 @@
         </button>
       </div>
       
+      <script>
+        jQuery(function($){
+			$("#campoFONE").mask("(99) 9999-9999");
+            $("#campoCEP").mask("99999-999");
+            $("#campoCNPJ").mask("99.999.999/9999-99");
+        });
+    </script>
       <div class="modal-body">
-      <form method="POST" action="processa.php" enctype="multipart/form-data">
+      <form method="POST" action="<?php echo "index.php?acao=editarContatoEmpresa&nome_fantasia=".$_REQUEST['nome_fantasia']."" ?>" enctype="multipart/form-data">
         <div class="row">
-        <input type="hidden" class="form-control" name="id" value="<?php echo $empresa['id']; ?>">
+         <input name="id" type="hidden" class="form-control" id="get-id" value="">
         <div class="form-group col-md-6">
                 <label for="name">Nome Fantasia</label>
-                <input type="text" class="form-control" name="nome_fantasia" id="nome_fantasia" value="<?php echo $empresa['nome_fantasia']; ?>">
+                <input type="text" class="form-control" name="nome_fantasia"  id="nome_fantasia" value="<?php echo $empresa['nome_fantasia']; ?>">
             </div>
             <div class="form-group col-md-6">
                 <label for="name">Razão Social</label>
@@ -22,15 +29,15 @@
             </div>  
             <div class="form-group col-md-6">
                 <label for="name">* Fone</label>
-                <input type="tel" id="campoFONE" class="form-control" name="empresa['fone']" value="<?php echo $empresa['fone']; ?>" required >
+                <input type="tel" class="form-control" name="fone" id="campoFONE" value="<?php echo $empresa['fone']; ?>" required >
             </div>      
             <div class="form-group col-md-6">
                 <label for="name">CNPJ</label>
-                <input type="text" id="campoCNPJ" class="form-control" name="empresa['cnpj']" value="<?php echo $empresa['cnpj']; ?>">
+                <input type="text"  class="form-control" name="cnpj" id="campoCNPJ" value="<?php echo $empresa['cnpj']; ?>">
             </div>
             <div class="form-group col-md-4">
                 <label for="name">CEP</label>
-                <input type="text" id="campoCEP" class="form-control" name="empresa['cep']" value="<?php echo $empresa['cep']; ?>">
+                <input type="text"  class="form-control" name="cep" id="campoCEP" value="<?php echo $empresa['cep']; ?>">
             </div>
         </div>
         <div class="row">
@@ -97,10 +104,11 @@
         </div>
     
       </div>
+      
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-        <button type="submit" class="btn btn-primary">Salvar</button>
-      </div>
+        <button type="submit" class="btn btn-primary" name="editarContatoEmpresa" >Salvar</button>
+        </div>
     </div>
     </form>
   </div>

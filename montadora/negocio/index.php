@@ -249,7 +249,7 @@ session_start();
         </div>
     </div>
 
-    <!-- PAIN�L NEG�CIOS -->
+    <!-- PAINEL NEGÓCIOS -->
     <div class="col-lg-4">
         <div class="panel panel-info">
             <div class="panel-heading">

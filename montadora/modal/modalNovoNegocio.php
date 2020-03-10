@@ -1,4 +1,4 @@
-<!-- MODAL NOVO NEG”CIO -->
+<!-- MODAL NOVO NEG√ìCIO -->
 <div class="modal fade" id="modalNovoNegocio" tabindex="-1" role="dialog" aria-labelledby="modalNovoNegocioLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -9,7 +9,7 @@
             <div class="modal-body">
             <form method="POST" action="<?php echo BASEURL."empresas/index.php?acao=salvarNegocio" ?>" enctype="multipart/form-data">
 				<div class="form-group col-md-6">
-                    <label for="recipient-name" class="control-label">Nome negÛcio:</label>
+                    <label for="recipient-name" class="control-label">Nome neg√≥cio:</label>
                     <input name="negocio['nome']" type="text" class="form-control" value="" required>
                 </div>
 				<div class="form-group col-md-6">
@@ -33,17 +33,17 @@
                     <input name="valor_estimado" type="text" class="form-control" id="valor" value="" placeholder="R$ 0,00" required>
                 </div>
 				<div class="form-group col-md-6">
-                    <label for="recipient-name" class="control-label">Expectativa de conclus„o:</label>
+                    <label for="recipient-name" class="control-label">Expectativa de conclus√£o:</label>
                     <input name="expectativa_conclusao" type="text" class="form-control" id="campoDATE1" value="" placeholder="00/00/0000" required>
                 </div>
 				<div class="form-group col-md-6">
-                    <label>Canal captaÁ„o:</label>  
+                    <label>Canal capta√ß√£o:</label>  
                     <select name="negocio['canal_captacao']" class="form-control"  value="" required>  
 					<option value="" selected>Selecione</option>
                     <option value="1">Cliente ativo</option>
                     <option value="2">Lista expositor</option>
-                    <option value="3">IndicaÁ„o promotora</option>
-					<option value="4">Outras indicaÁıes</option>
+                    <option value="3">Indica√ßo promotora</option>
+					<option value="4">Outras indica√ß√µes</option>
 					<option value="4">Instagram</option>
 					<option value="4">Site</option>	
 					</select>  
@@ -53,15 +53,15 @@
                     <select name="negocio['potencial_vendas']" class="form-control"  value="" required>  
 					<option value="" selected>Selecione</option>
                     <option value="1">Baixo</option>
-                    <option value="2">MÈdio</option>
+                    <option value="2">M√©dio</option>
                     <option value="3">Alto</option>
 					</select>  
                 </div>
 				<div class="form-group col-md-6">
-                    <label>Est·gio:</label>  
+                    <label>Est√°gio:</label>  
                     <select name="negocio['estagio']" class="form-control"  value="" required>  
 					<option value="" selected>Selecione</option>
-                    <option value="1">CaptaÁ„o</option>
+                    <option value="1">Capta√ß√£o</option>
                     <option value="2">Proposta enviada</option>
                     <option value="3">Negociando contrato</option>
 					</select>  

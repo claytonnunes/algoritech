@@ -1,4 +1,4 @@
-<!-- MODAL NOVO NEG�CIO -->
+<!-- MODAL NOVO NEGÓCIO -->
 <div class="modal fade" id="modalNovaEmpresa" tabindex="-1" role="dialog" aria-labelledby="modalNovaEmpresaLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">

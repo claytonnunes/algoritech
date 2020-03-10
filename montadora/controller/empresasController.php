@@ -16,7 +16,7 @@ function index_empresa() {
     $empresas = 	('empresas');
 }
 
-// PESQUISA USU�RIO POR MODULO
+// PESQUISA USUÁRIO POR MODULO
 function pesquisaEmpresaId($coluna1 = null, $valor1 = null, $coluna2 = null, $valor2 = null, $coluna3 = null, $valor3 = null) {
 	global $empresas;
     $empresas = pesquisa_tres_colunas('empresas', $coluna1, $valor1, $coluna2, $valor2, $coluna3, $valor3);
@@ -48,8 +48,8 @@ function pesquisaEmpresa() {
 	$id_edicao = $_SESSION["id_edicao"];  
 	
 	global $empresas;
-    $empresas = pesquisa_empresa($id_pai, $id_usuario, $id_edicao);
-}
+	$empresas = pesquisa_empresa($id_pai, $id_usuario, $id_edicao);
+	}
 
 
 function findFilterCompany($nome_fantasia = null) {
@@ -69,6 +69,10 @@ function findIdCompany($nome_fantasia = null) {
     global $empresas;
 	
    $empresas = find_columns_like('empresas', 'nome_fantasia', $nome_fantasia, $condicao);
+   $_SESSION['msgpesquisa'] = '<div class="alert alert-danger" role="alert" class="close">SELECIONE UM CLIENTE ABAIXO PARA INICIAR ATENDIMENTO<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button></div>';
+	
 	
 }
 
@@ -253,13 +257,15 @@ function salvarEmpresa(){
    
 }
 
+
 /**
  *	Atualizacao/Edicao de Cliente
  */
 function editarEmpresa() {
     $now = date_create('now', new DateTimeZone('America/Recife'));
-    if (isset($_GET['id'])) {
-        $id = $_GET['id'];
+    if (isset($_REQUEST['id'])) {
+		$id = $_REQUEST['id'];
+				
         if (isset($_POST['empresa'])) {
             $empresa = $_POST['empresa'];
             $empresa['modified'] = $now->format("Y-m-d H:i:s");
@@ -272,20 +278,24 @@ function editarEmpresa() {
 			$empresa['cidade'] = $_REQUEST['cidade'];
 			$empresa['website'] = $_REQUEST['website'];
 			update('empresas', $id, $empresa);
+			$_SESSION['msgeditada'] = '<div class="alert alert-warning" role="alert">Empresa Editada com Sucesso<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button></div>';
             //header('location: index.php');
-			echo "<script>location.href='index.php';</script>";	
+			echo "<script>location.href='../empresas/index.php?filtro=nomeCliente&pg=cliente&PesquisaCliente=".$_REQUEST['nome_fantasia']."';</script>" ;	
         } else {
             global $empresa;
             $empresa = find('empresas', $id);
-        }
+		}
+		
     } else {
         //header('location: index.php');
-		echo "<script>location.href='index.php';</script>";	
+		echo "<script>location.href='index.php?acao=id';</script>";	
     }
 }
 
 /**
- *  Visualiza��o de uma empresa
+ *  Visualização de uma empresa
  */
 function visualizarEmpresa($id = null) {
     
@@ -301,7 +311,7 @@ function visualizarEmpresa($id = null) {
 
 
 /**
- *  Exclus�o de uma empresa
+ *  Exclusão de uma empresa
  */
 function excluirEmpresa_backup($id = null) {
     global $empresa;
@@ -311,20 +321,25 @@ function excluirEmpresa_backup($id = null) {
 }
 
 /**
- *  Exclus�o de uma empresa (sem eliminar o registro)
+ *  Exclusão de uma empresa (sem eliminar o registro)
  */
-function excluirEmpresa($id = null) {
-    $now = date_create('now', new DateTimeZone('America/Recife'));
-    if (isset($_GET['id'])) {
-        $id = $_GET['id'];
+function excluirEmpresa() {
+    if (isset($_REQUEST['id'])) {
+		$now = date_create('now', new DateTimeZone('America/Recife'));
+		    $id = $_REQUEST['id'];
             $empresa['modified'] = $now->format("Y-m-d H:i:s");
 			$empresa['deleted'] = '1';
 			update('empresas', $id, $empresa);
+			$_SESSION['msgapagar'] = '<div class="alert alert-danger" role="alert" class="close">Empresa Excluida com Sucesso<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button></div>';
             //header('location: ../empresas/index.php');
-			echo "<script>location.href='../empresas/index.php';</script>";	
+			echo "<script>location.href='../empresas/index.php';</script>";
+			
     } else {
        // header('location: ../empresas/index.php');
 		echo "<script>location.href='../empresas/index.php';</script>";	
-    }
+		
+   	 }
 }
 ?>

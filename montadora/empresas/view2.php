@@ -21,7 +21,7 @@ session_start();
 			$id_edicao = $_SESSION['id_edicao'];
 	endif;
 	pesquisaEdicaoId($id_edicao);
-	// Se não tiver evento cadastrado redireciona
+	// Se nï¿½o tiver evento cadastrado redireciona
 	if ($eventos) :
 		foreach ($eventos as $evento):
 			$id_edicao = $evento['id'];
@@ -35,7 +35,7 @@ session_start();
 
 	if(isset($_REQUEST['salvaratendimento'])):
 		if($_REQUEST['comentario']==""){		
-			$mensagem = "Escreva um comentário";		
+			$mensagem = "Escreva um comentÃ¡rio";		
 		}
 		else if($_REQUEST['proxima_data']==""){
 			$mensagem = "Selecione a proxima data";
@@ -45,7 +45,7 @@ session_start();
 			$mensagem = "Selecione o Evento";
 		}
 		else{
-			$mensagem = "Comentário registrada com sucesso";
+			$mensagem = "ComentÃ¡rio registrada com sucesso";
 			salvarAtendimento();
 		}
 	endif;	
@@ -65,9 +65,9 @@ session_start();
 	<div class="row">
 		<div class="form-group col-md-9" align="right">
 			<a href="<?php echo BASEURL."briefing/view.php?acao=verGrupo&id_atendimento=".$_REQUEST['id_atendimento']."&id_empresa=".$_REQUEST['id_empresa']; ?>" class="btn btn-lg btn-link"><i class="fa fa-comment"></i> briefing</a>
-			<a href="<?php echo BASEURL; ?>produto/add.php?acao=cadastrarGrupoProduto&id_empresa=<?php echo $_REQUEST['id_empresa']; ?>&id_atendimento=<?php echo $_REQUEST['id_atendimento']; ?>" class="btn btn-lg btn-link"><i class="fa fa-shopping-cart"></i> cotação</a>
+			<a href="<?php echo BASEURL; ?>produto/add.php?acao=cadastrarGrupoProduto&id_empresa=<?php echo $_REQUEST['id_empresa']; ?>&id_atendimento=<?php echo $_REQUEST['id_atendimento']; ?>" class="btn btn-lg btn-link"><i class="fa fa-shopping-cart"></i> cotaÃ§Ã£o</a>
 			<a href="#" class="btn btn-lg btn-link"><i class="fa fa-file"></i> contrato</a>
-			<a href="#" class="btn btn-lg btn-link"><i class="fa fa-usd"></i> cobrança</a>
+			<a href="#" class="btn btn-lg btn-link"><i class="fa fa-usd"></i> cobranÃ§a</a>
 			<a href="#" class="btn btn-lg btn-link"><i class="fa fa-wrench"></i> OS</a>
 			<a href="#" class="btn btn-lg btn-link"><i class="fa fa-paperclip"></i> anexar arquivo</a>
 		</div>
@@ -128,7 +128,7 @@ session_start();
 	<div class="row">
 		<div class="form-group col-md-5">
 			<label for="exampleTextarea"></label>
-			<textarea class="form-control" id="exampleTextarea" rows="2" name="comentario" placeholder="Descreva o seu comentário..." required ></textarea>
+			<textarea class="form-control" id="exampleTextarea" rows="2" name="comentario" placeholder="Descreva o seu comentï¿½rio..." required ></textarea>
 		</div>
 		<div class="form-group col-md-3">
 			<label class="control-label"></label>
@@ -195,10 +195,10 @@ session_start();
 							$situacao = "indefinido";
 						}
 						else if ($situacao==1){
-							$situacao = "Captação";
+							$situacao = "CaptaÃ§Ã£oo";
 						}
 						else if ($situacao==2){
-							$situacao = "Orçamento Enviado";
+							$situacao = "OrÃ§amento Enviado";
 						}
 						else if ($situacao==3){
 							$situacao = "Alinhando Contrato";
