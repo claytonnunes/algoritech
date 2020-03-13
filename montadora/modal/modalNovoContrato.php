@@ -1,4 +1,4 @@
-<!-- MODAL NOVO NEGÓCIO -->
+<!-- MODAL NOVO NEGï¿½CIO -->
 <div class="modal fade" id="modalNovoContrato" tabindex="-1" role="dialog" aria-labelledby="modalNovoContratoLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -12,7 +12,7 @@
             <?php }  else{ ?>
             <form method="POST" action="" data-toggle="modal" data-target="#modalNovoContrato"  enctype="multipart/form-data">
 				<div class="form-group col-md-6">
-                    <label for="recipient-name" class="control-label">Nome negócio:</label>
+                    <label for="recipient-name" class="control-label">Nome negÃ³cio:</label>
                     <input name="negocio['nome']" type="text" class="form-control" value="" required>
                 </div>
 				<div class="form-group col-md-6">

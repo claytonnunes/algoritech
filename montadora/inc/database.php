@@ -110,7 +110,7 @@ function pesquisaJoinLike( $id = null, $pesquisa = null ) {
     return $found;
 }
 
-// PESQUISA COTAÇÃO RELACIONADA COM PRODUTOS
+// PESQUISA COTAï¿½ï¿½O RELACIONADA COM PRODUTOS
 function pesquisa_cotacao_produto( $id = null, $id2 = null) {
     $database = open_database();
     $found = null;

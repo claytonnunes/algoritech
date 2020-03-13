@@ -2,10 +2,10 @@
 if ( ! isset( $_SESSION['usuario'] ) && ! isset( $_SESSION['senha'] ) ) {
     // A√ß√£o a ser executada: mata o script e manda uma mensagem
 	echo "<script language='javascript' type='text/javascript'>
-              	alert('Sess„o n„o inicializada!');
+              	alert('Sess√£o n√£o inicializada!');
               </script>";			
         echo "<script>location.href='../login.php';</script>";
-    exit('Usu·rio n„o est· logado');
+    exit('Usu√°rio n√£o est√° logado');
 } 
 else {	
     $modulo = $_SESSION['modulo'];

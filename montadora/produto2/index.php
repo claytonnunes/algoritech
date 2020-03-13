@@ -38,7 +38,7 @@ if (isset($_REQUEST['acao'])) {
 				if(isset($_REQUEST['acao'])):
 					if ($_REQUEST['acao']=='pesquisaProduto'):
 					echo $_REQUEST['nome_produto']; endif; endif;?>" aria-label="Pesquisar"/> 
-				<i class="fa fa-search" aria-hidden="true"></i>
+				<button class="fa fa-search" type="submit" aria-hidden="true" style="background: transparent; border: none"></button>
 				</form>
 			</div>
 			<div class="col-sm-6 text-right">
@@ -71,7 +71,7 @@ if (isset($_REQUEST['acao'])) {
 					<div id="row">
 						<div class="form-group col-md-1" align="left">Cod.</div>
 						<div class="form-group col-md-2" align="left">Produto</div>
-						<div class="form-group col-md-4" align="left" >Descrição</div>
+						<div class="form-group col-md-4" align="left" >DescriÃ§Ã£o</div>
 						<div class="form-group col-md-3" align="left" >Categoria</div>
 						<div class="form-group col-md-1" align="left" ></div>
 					</div>

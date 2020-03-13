@@ -55,8 +55,8 @@ if ($_REQUEST['acao']=='editarProduto') {
 						<div class="form-group col-md-4" align="left">Produto</div>
 						<div class="form-group col-md-2" align="left">Medida</div>
 						<div class="form-group col-md-1" align="left" >Estoque</div>
-						<div class="form-group col-md-2" align="left" >Preço</div>
-						<div class="form-group col-md-3" align="left" >Ação</div>
+						<div class="form-group col-md-2" align="left" >PreÃ§o</div>
+						<div class="form-group col-md-3" align="left" >AÃ§Ã£o</div>
 					</div>
 				</h5>
 				</td>
@@ -92,7 +92,7 @@ if ($_REQUEST['acao']=='editarProduto') {
 						</div>
 					</td>         
 				</tr>
-				<!-- MODAL DE VISUALIZAÇÃO -->
+				<!-- MODAL DE VISUALIZAÃ‡ÃƒO -->
 				<?php include('modalView.php');?>
 			<?php
 				endforeach; 
@@ -100,7 +100,7 @@ if ($_REQUEST['acao']=='editarProduto') {
 			?>
 		</tbody>
 	</table>
-	<!-- MODAL DE EDIÇÃO -->
+	<!-- MODAL DE EDIÃ‡ÃƒO -->
 	<?php include('modalEdit.php');?>
 	
     <script type="text/javascript">

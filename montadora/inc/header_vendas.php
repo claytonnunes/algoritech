@@ -28,8 +28,11 @@
 	<!-- SCRIPT PARA MASCARA DE MOEDA R$ -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
 	<script src="<?php echo RAIZURL; ?>js/jquery.maskMoney.js" type="text/javascript"></script>
-	
-	<!-- FIM DO SCRIPT PARA MASCARA DE MOEDA R$ -->
+    <!-- FIM DO SCRIPT PARA MASCARA DE MOEDA R$ -->
+
+	<!-- SCRIPT PARA MASCARA DE TELEFONE COM NUMERO DE 8 a 9 DIGITOS -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+	<!-- FIM DO SCRIPT PARA DE TELEFONE COM NUMERO -->
 	
     <script type="text/javascript" src="<?php echo RAIZURL; ?>js/filtro.js"></script>
 	

@@ -28,7 +28,7 @@ editarEmpresa();
                 <input type="text" class="form-control" name="nome_fantasia" value="<?php echo $empresa['nome_fantasia']; ?>">
             </div>
             <div class="form-group col-md-3">
-                <label for="name">Raz„o Social</label>
+                <label for="name">Raz√£o Social</label>
                 <input type="text" class="form-control" name="razao_social" value="<?php echo $empresa['razao_social']; ?>">
             </div>  
             <div class="form-group col-md-2">
@@ -46,7 +46,7 @@ editarEmpresa();
         </div>
         <div class="row">
         	<div class="form-group col-md-4">
-                <label for="name">EndereÁo</label>
+                <label for="name">Endere√ßo</label>
                 <input type="text" class="form-control" name="endereco" value="<?php echo $empresa['endereco']; ?>">
             </div>
             <div class="form-group col-md-4">

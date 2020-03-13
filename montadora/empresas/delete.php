@@ -8,9 +8,9 @@
 
 require_once('../controller/empresasController.php');
 
-if (isset($_GET['id'])){
+if (isset($_REQUEST['id'])){
 
-    excluirEmpresa($_GET['id']);
+    excluirEmpresa($_REQUEST['id']);
 
 } else {
     die("ERRO: ID não definido.");

@@ -3,7 +3,7 @@ require_once('../controller/cotacaoController.php');
 pesquisaNumeroCotacao('numero_cotacao', 'id_pai', $_SESSION['id_pai'], 'id_grupo_produto', $_REQUEST['id_negocio'], 'deleted', '0', 'ORDER BY id_cotacao ASC');
 ?>
     <div class="form-group col-md-12">
-        <p><h4>COTA«√O COD: <?php echo $_REQUEST['id_negocio']; ?></h4></p>
+        <p><h4>COTA√á√ÉO COD: <?php echo $_REQUEST['id_negocio']; ?></h4></p>
         <div class="form-group col-md-2" align="left">Data</div>
         <div class="form-group col-md-3" align="left">Nome</div>
         <div class="form-group col-md-2" align="left">Valor total</div>
