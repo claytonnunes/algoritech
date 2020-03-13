@@ -51,7 +51,7 @@ function salvarVendedor(){
 }
 
 /**
- *  Visualização de uma empresa
+ *  Visualizaï¿½ï¿½o de uma empresa
  */
 function findVendedor() {
 	$username = $_REQUEST['newusername'];
@@ -114,7 +114,7 @@ function salvarVendedorEquipe(){
 				echo "<script>location.href='../equipe/index.php';</script>";	
 	
 				else:
-				 	$_SESSION['message'] = 'o valor não pode ser maior que R$ 99.999.999,99!';
+				 	$_SESSION['message'] = 'o valor nÃ£o pode ser maior que R$ 99.999.999,99!';
 					$_SESSION['type'] = 'danger';
 					$_SESSION['time_message'] = time();
 			
@@ -126,7 +126,7 @@ function salvarVendedorEquipe(){
 
 
 /**
- *  Exclusão de uma empresa (sem eliminar o registro)
+ *  Exclusï¿½o de uma empresa (sem eliminar o registro)
  */
 function excluirUsuario($id = null) {
     $now = date_create('now', new DateTimeZone('America/Recife'));
@@ -142,7 +142,7 @@ function excluirUsuario($id = null) {
 		echo "<script>location.href='../vendas/index.php';</script>";
     }
 }
-/* FUNção salvando formulario recebido por RADIO
+/* FUNï¿½ï¿½o salvando formulario recebido por RADIO
 function salvarVendedorEquipe(){
     $result = false;
 	

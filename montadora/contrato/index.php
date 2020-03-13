@@ -31,7 +31,7 @@ session_start();
 				$nome_fantasia = $_REQUEST['PesquisaCliente'];			
 				$string=$nome_fantasia;
 				function tirarAcentos($string){
-					return preg_replace(array("/(á|à|ã|â|ä)/","/(Á|À|Ã|Â|Ä)/","/(é|è|ê|ë)/","/(É|È|Ê|Ë)/","/(í|ì|î|ï)/","/(Í|Ì|Î|Ï)/","/(ó|ò|õ|ô|ö)/","/(Ó|Ò|Õ|Ô|Ö)/","/(ú|ù|û|ü)/","/(Ú|Ù|Û|Ü)/","/(ñ)/","/(Ñ)/","/(ç)/","/(Ç)/"),explode(" ","a A e E i I o O u U n N c C"),$string);
+					return preg_replace(array("/(ï¿½|ï¿½|ï¿½|ï¿½|ï¿½)/","/(ï¿½|ï¿½|ï¿½|ï¿½|ï¿½)/","/(ï¿½|ï¿½|ï¿½|ï¿½)/","/(ï¿½|ï¿½|ï¿½|ï¿½)/","/(ï¿½|ï¿½|ï¿½|ï¿½)/","/(ï¿½|ï¿½|ï¿½|ï¿½)/","/(ï¿½|ï¿½|ï¿½|ï¿½|ï¿½)/","/(ï¿½|ï¿½|ï¿½|ï¿½|ï¿½)/","/(ï¿½|ï¿½|ï¿½|ï¿½)/","/(ï¿½|ï¿½|ï¿½|ï¿½)/","/(ï¿½)/","/(ï¿½)/","/(ï¿½)/","/(ï¿½)/"),explode(" ","a A e E i I o O u U n N c C"),$string);
 				}
 				$string = tirarAcentos($string);
 				findIdCompany($string);			
@@ -103,7 +103,7 @@ session_start();
             			</td>
                       	<td class="actions text-right">
 						  <button type="button" class="btn btn-xs btn-success" data-toggle="modal" data-target="#modalNovoNegocio" 
-							data-send-id="<?php echo $empresa['id']; ?>"> <i class="fa fa-plus"></i> Novo negócio</button>
+							data-send-id="<?php echo $empresa['id']; ?>"> <i class="fa fa-plus"></i> Novo negÃ³cio</button>
 					  		<a href="#" class="btn btn-sm btn-info"><i class="fa fa-eye"></i> Visualizar</a>
                              <?php if($_SESSION['tipo_acesso']==0): ?>
                             <a href="edit.php?id=<?php echo $empresa['id']; ?>" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Editar</a>
@@ -131,7 +131,7 @@ session_start();
 	<?php include('../modal/modal-exclusao.php'); ?>
 	<?php include('../modal/modalNovoNegocio.php'); ?>
 	<?php include('../modal/modalNovaEmpresa.php'); ?>
-	<!-- SCRIPT PARA MODAL NOVO NEGÓCIO -->
+	<!-- SCRIPT PARA MODAL NOVO NEGÃ“CIO -->
 	<script type="text/javascript">
 		$('#modalNovoNegocio').on('show.bs.modal', function (event) {
 			var button = $(event.relatedTarget) 

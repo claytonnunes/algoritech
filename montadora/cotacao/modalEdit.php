@@ -16,7 +16,7 @@
                     <input name="produto['medida']" type="text" class="form-control" id="get-medida">
                 </div>
                 <div class="form-group col-md-12">
-                    <label for="recipient-name" class="control-label">descrição:</label>
+                    <label for="recipient-name" class="control-label">descriÃ£o:</label>
                     <textarea name="produto['descricao']" class="form-control" id="get-descricao"></textarea>
                 </div>
                 <div class="form-group col-md-6">
@@ -36,7 +36,7 @@
                     <input name="valor_compra" type="text" class="form-control" id="get-valorcompra">
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="recipient-name" class="control-label">Valor locação:</label>
+                    <label for="recipient-name" class="control-label">Valor locaÃ§Ã£o:</label>
                     <input name="valor_locacao" type="text" class="form-control" id="get-valorlocacao">
                 </div>
                 <div class="form-group col-md-12">
