@@ -7,14 +7,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      
-      <script>
-        jQuery(function($){
-			$("#campoFONE").mask("(99) 9999-9999");
-            $("#campoCEP").mask("99999-999");
-            $("#campoCNPJ").mask("99.999.999/9999-99");
-        });
-    </script>
+     
       <div class="modal-body">
       <form method="POST" action="<?php echo "index.php?acao=editarContatoEmpresa&nome_fantasia=".$_REQUEST['nome_fantasia']."" ?>" enctype="multipart/form-data">
         <div class="row">
@@ -25,37 +18,37 @@
             </div>
             <div class="form-group col-md-6">
                 <label for="name">Razão Social</label>
-                <input type="text" class="form-control" name="razao_social" id="razao_social" value="<?php echo $empresa['razao_social']; ?>">
+                <input type="text" class="form-control" name="empresa['razao_social']" id="razao_social" value="<?php echo $empresa['razao_social']; ?>">
             </div>  
             <div class="form-group col-md-6">
                 <label for="name">* Fone</label>
-                <input type="tel" class="form-control" name="fone" id="campoFONE" value="<?php echo $empresa['fone']; ?>" required >
+                <input type="tel" class="form-control" name="fone" id="foneEditar" value="<?php echo $empresa['fone']; ?>" required >
             </div>      
             <div class="form-group col-md-6">
                 <label for="name">CNPJ</label>
-                <input type="text"  class="form-control" name="cnpj" id="campoCNPJ" value="<?php echo $empresa['cnpj']; ?>">
+                <input type="text"  class="form-control" name="cnpj" id="cnpjEditar" value="<?php echo $empresa['cnpj']; ?>">
             </div>
             <div class="form-group col-md-4">
                 <label for="name">CEP</label>
-                <input type="text"  class="form-control" name="cep" id="campoCEP" value="<?php echo $empresa['cep']; ?>">
+                <input type="text"  class="form-control" name="cep" id="cepEditar" value="<?php echo $empresa['cep']; ?>">
             </div>
         </div>
         <div class="row">
         <div class="form-group col-md-6">
                 <label for="name">Endereço</label>
-                <input type="text" class="form-control" name="endereco" id="endereco" value="<?php echo $empresa['endereco']; ?>">
+                <input type="text" class="form-control" name="empresa['endereco']" id="endereco" value="<?php echo $empresa['endereco']; ?>">
             </div>
             <div class="form-group col-md-6">
                 <label for="name">Complemento</label>
-                <input type="text" class="form-control" name="complemento" id="complemento" value="<?php echo $empresa['complemento']; ?>">
+                <input type="text" class="form-control" name="empresa['complemento']" id="complemento" value="<?php echo $empresa['complemento']; ?>">
             </div>
             <div class="form-group col-md-6">
                 <label for="name">Bairro</label>
-                <input type="text" class="form-control" name="bairro" id="bairro" value="<?php echo $empresa['bairro']; ?>">
+                <input type="text" class="form-control" name="empresa['bairro']" id="bairro" value="<?php echo $empresa['bairro']; ?>">
             </div>
             <div class="form-group col-md-6">
                 <label for="name">Cidade</label>
-                <input type="text" class="form-control" name="cidade" id="cidade" value="<?php echo  $empresa['cidade']; ?>">
+                <input type="text" class="form-control" name="empresa['cidade']" id="cidade" value="<?php echo  $empresa['cidade']; ?>">
             </div>
             <div class="form-group col-md-2">
                 <label for="name">Estado</label>
@@ -113,3 +106,10 @@
     </form>
   </div>
 </div>
+<script>
+        jQuery(function($){  
+		    $("#foneEditar").mask("(99) 9999-9999");
+            $("#cepEditar").mask("99999-999");
+		    $("#cnpjEditar").mask("99.999.999/9999-99");
+		});
+         </script>

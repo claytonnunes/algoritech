@@ -265,32 +265,28 @@ function editarEmpresa() {
     $now = date_create('now', new DateTimeZone('America/Recife'));
     if (isset($_REQUEST['id'])) {
 		$id = $_REQUEST['id'];
-				
+		function soNumero($str) {
+    		return preg_replace("/[^0-9]/", "", $str);
+		}
+		$fone = soNumero($_REQUEST['fone']);
+		$cnpj = soNumero($_REQUEST['cnpj']);
+		$cep = soNumero($_REQUEST['cep']);
         if (isset($_POST['empresa'])) {
             $empresa = $_POST['empresa'];
             $empresa['modified'] = $now->format("Y-m-d H:i:s");
-			
-			$empresa['nome_fantasia'] = $_REQUEST['nome_fantasia'];
-			$empresa['razao_social'] = $_REQUEST['razao_social'];
-			$empresa['endereco'] = $_REQUEST['endereco'];
-			$empresa['complemento'] = $_REQUEST['complemento'];
-			$empresa['bairro'] = $_REQUEST['bairro'];
-			$empresa['cidade'] = $_REQUEST['cidade'];
-			$empresa['website'] = $_REQUEST['website'];
+			$empresa['nome_fantasia'] = $_REQUEST['nome_fantasia'];		
+			$empresa['fone'] = $fone;
+			$empresa['cnpj'] = $cnpj;
+			$empresa['cep'] = $cep;
 			update('empresas', $id, $empresa);
-			$_SESSION['msgeditada'] = '<div class="alert alert-warning" role="alert">Empresa Editada com Sucesso<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-		  </button></div>';
-            //header('location: index.php');
-			echo "<script>location.href='../empresas/index.php?filtro=nomeCliente&pg=cliente&PesquisaCliente=".$_REQUEST['nome_fantasia']."';</script>" ;	
-        } else {
+			echo "<script>location.href='../empresas/index.php?alerta=editar&filtro=nomeCliente&pg=cliente&PesquisaCliente=".$_REQUEST['nome_fantasia']."';</script>" ;	
+		} else {
             global $empresa;
             $empresa = find('empresas', $id);
 		}
 		
     } else {
-        //header('location: index.php');
-		echo "<script>location.href='index.php?acao=id';</script>";	
+       echo "<script>location.href='index.php?acao=id';</script>";	
     }
 }
 
@@ -330,9 +326,7 @@ function excluirEmpresa() {
             $empresa['modified'] = $now->format("Y-m-d H:i:s");
 			$empresa['deleted'] = '1';
 			update('empresas', $id, $empresa);
-			$_SESSION['msgapagar'] = '<div class="alert alert-danger" role="alert" class="close">Empresa Excluida com Sucesso<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-		  </button></div>';
+		
             //header('location: ../empresas/index.php');
 			echo "<script>location.href='../empresas/index.php';</script>";
 			

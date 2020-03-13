@@ -72,38 +72,18 @@ session_start();
 		</div>
 	</div> 
 </header>
- 	<!-- Mensagem para PESQUISAR 10/03/2020 -->
-	 <?php
-	 $_SESSION['msgpesquisa'] = '<div class="alert alert-danger" role="alert" class="close">SELECIONE UM CLIENTE ABAIXO PARA INICIAR ATENDIMENTO<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-	 <span aria-hidden="true">&times;</span>
-   </button></div>';
-		if((time() - $_SESSION['time_message'])>1): unset($_SESSION['msgpesquisa']); endif; 
-		if (!empty($_SESSION['msgpesquisa'])) : ?>
-    		<?php echo $_SESSION['msgpesquisa']; ?>
-			<?php endif; ?>
-
-   	<!-- CODIGO PARA IMPRIMIR ALERTA NA TELA -->	
-	   <?php if((time() - $_SESSION['time_message'])>1): unset($_SESSION['msgpesquisa']); endif; 
-		if (!empty($_SESSION['msgpesquisa'])) : ?>
-	<div class="alert alert-danger alert-dismissible" role="alert">
-	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-	<span aria-hidden="true">&times;</span></button>SELECIONE UM CLIENTE ABAIXO PARA INICIAR ATENDIMENTO
-	</div>
+ 	<!-- CODIGO PARA IMPRIMIR ALERTA NA TELA -->	
+	 <?php 
+		if((time() - $_SESSION['time_message'])>1): unset($_SESSION['message']); endif; 
+		if (!empty($_SESSION['message'])) : ?>
+    	<div class="alert alert-<?php echo $_SESSION['type']; ?> alert-dismissible" role="alert">
+        	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			<span aria-hidden="true">&times;</span></button>
+    		<?php echo $_SESSION['message']; ?>
+		</div>
 	<?php endif; ?>
-	  	<!-- Mensagem para EDITAR 10/03/2020 -->
-	<?php 
-		if((time() - $_SESSION['time_message'])>1): unset($_SESSION['msgeditada']); endif; 
-		if (!empty($_SESSION['msgeditada'])) : ?>
-    		<?php echo $_SESSION['msgeditada']; ?>
-			<?php endif; ?>
 
-			  	<!-- Mensagem para Excluir 10/03/2020 -->
-	<?php 
-		if((time() - $_SESSION['time_message'])>1): unset($_SESSION['msgapagar']); endif; 
-		if (!empty($_SESSION['msgapagar'])) : ?>
-    		<?php echo $_SESSION['msgapagar']; ?>
-			<?php endif; ?>
-
+	<!-- FINAL -->	
 	
 	<hr>
 	<!-- FIM DO CODIGO PARA IMPRIMIR ALERTA NA TELA -->
@@ -199,11 +179,12 @@ session_start();
     	</div>
     </form>
 	<?php // include('../modal/modalVisualizar.php'); ?>
-	<?php include('../modal/modalEditaEmpresa.php'); ?>
+	
 	<?php include('../modal/modalVisualizarEmpresa.php'); ?>
 	<?php include('../modal/modal-exclusao.php'); ?>
 	<?php include('../modal/modalNovoNegocio.php'); ?>
 	<?php include('../modal/modalNovaEmpresa.php'); ?>
+	<?php include('../modal/modalEditaEmpresa.php'); ?>
 
 
 <!-- LUAN SANTANA -->
@@ -233,10 +214,10 @@ session_start();
 				modal.find('.modal-body input').val(id)
 				modal.find('#nome_fantasia').val(idvisualizanomefantasia)
 				modal.find('#razao_social').val(idvisualizarazao)
-				modal.find('#campoFONE').val(idvisualizacampofone)
+				modal.find('#fone').val(idvisualizacampofone)
 				modal.find('#email').val(idvisualizaemail)
-				modal.find('#campoCNPJ').val(idvisualizacnpj)
-				modal.find('#campoCEP').val(idvisualizacep)
+				modal.find('#cnpj').val(idvisualizacnpj)
+				modal.find('#cep').val(idvisualizacep)
 				modal.find('#endereco').val(idvisualizaendereco)
 				modal.find('#complemento').val(idvisualizacomplemento)
 				modal.find('#bairro').val(idvisualizabairro)
@@ -285,9 +266,9 @@ session_start();
 			modal.find('#nome_fantasia').val(recipientnomefantasia)
 			modal.find('#razao_social').val(recipientrazao)
 			modal.find('#email').val(recipientemail)
-			modal.find('#campoFONE').val(recipientcampofone)
-			modal.find('#campoCNPJ').val(recipientcnpj)
-			modal.find('#campoCEP').val(recipientcep)
+			modal.find('#fone').val(recipientcampofone)
+			modal.find('#cnpj').val(recipientcnpj)
+			modal.find('#cep').val(recipientcep)
 			modal.find('#endereco').val(recipientendereco)
 			modal.find('#complemento').val(recipientcomplemento)
 			modal.find('#bairro').val(recipientbairro)
@@ -324,24 +305,6 @@ session_start();
 		})
 	</script>
 
-
-	<script>
-        jQuery(function($){  
-		    $("#campoDATE1").mask("99/99/9999");
-			$("#campoDATE2").mask("99/99/9999");
-			$("#campoDATE3").mask("99/99/9999");
-			$("#campoDATE4").mask("99/99/9999");
-			$("#campoDATE5").mask("99/99/9999");
-			$("#campoDATE6").mask("99/99/9999");
-			$("#campoFONE").mask("(99) 9999-9999");
-			$("#campoFONE2").mask("(99) 9999-9999");
-			$("#campoFONE3").mask("(99) 9999-9999");
-            $("#campoCEL").mask("(99) 9 9999-9999");
-		    $("#campoCEP").mask("99999-999");
-            $("#campoCNPJ").mask("99.999.999/9999-99");
-
-        });
-    </script>
 	<script type="text/javascript">+$("#valor").maskMoney({prefix:'R$ ', allowNegative: true, thousands:'.', decimal:',', affixesStay: false});</script>
     <script type="text/javascript">
 		$(document).ready(function(){

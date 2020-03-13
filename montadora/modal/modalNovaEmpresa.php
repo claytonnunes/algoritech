@@ -15,7 +15,7 @@
                 </div>
 				<div class="form-group col-md-6">
                     <label for="recipient-name" class="control-label">Fone empresa (Obrigatório)</label>
-                    <input name="fone" type="text" class="form-control" id="campoFONE2" value="" placeholder="(99) 9999-9999" required>
+                    <input name="fone" type="text" class="form-control" id="campoFONE1" value="" placeholder="(99) 9999-9999" required>
                 </div>
 				<div class="form-group col-md-6">
                     <label for="recipient-name" class="control-label">Nome contato (Obrigatório)</label>
@@ -23,7 +23,7 @@
                 </div>
                 <div class="form-group col-md-6">
                     <label for="recipient-name" class="control-label">Fone contato (Obrigatório)</label>
-                    <input name="fone2" type="text" class="form-control" id="campoFONE3" value="" placeholder="(99) 9999-9999" required>
+                    <input name="fone2" type="text" class="form-control" id="campoCEL1" value="" placeholder="(99)9 9999-9999" required>
                 </div>
             </div>
             <div class="row">
@@ -37,7 +37,7 @@
                 </div>
                 <div class="form-group col-md-4">
                     <label for="recipient-name" class="control-label">Celular contato</label>
-                    <input name="celular" type="text" class="form-control" id="campoCEL" placeholder="(99)9 9999-9999">
+                    <input name="celular" type="text" class="form-control" id="campoCEL2" placeholder="(99)9 9999-9999">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="recipient-name" class="control-label">Instagram contato</label>
@@ -53,7 +53,7 @@
                 </div>
                 <div class="form-group col-md-4">
                     <label for="recipient-name" class="control-label">CNPJ</label>
-                    <input name="cnpj" type="text" class="form-control" id="campoCNPJ" placeholder="00.000.000/0000-00">
+                    <input name="cnpj" type="text" class="form-control" id="campoCNPJ1" value="" placeholder="99.999.999/9999-99">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="recipient-name" class="control-label">Instagram empresa</label>
@@ -110,7 +110,7 @@
                 </div>
                 <div class="form-group col-md-4">
                     <label for="recipient-name" class="control-label">CEP</label>
-                    <input name="cep" type="text" class="form-control" id="campoCEP" placeholder="00000-000">
+                    <input name="cep" type="text" class="form-control" id="campoCEP1" value="" placeholder="00000-000">
                 </div>
 				<input name="negocio['id_empresa']" type="hidden" class="form-control" id="get-id" value="">
                 <!--Footer-->
@@ -125,4 +125,12 @@
         </div>
     </div>
 </div>
-                
+<script>
+        jQuery(function($){  
+		    $("#campoFONE1").mask("(99) 9999-99999");
+			$("#campoCEL1").mask("(99) 9 9999-9999");
+            $("#campoCEL2").mask("(99) 9 9999-9999");
+		    $("#campoCEP1").mask("99999-999");
+		    $("#campoCNPJ1").mask("99.999.999/9999-99");
+		});
+         </script>

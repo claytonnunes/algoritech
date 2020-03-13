@@ -62,7 +62,7 @@
                 </div>
 				<input name="negocio['id_empresa']" type="hidden" class="form-control" id="visualiza" value="">
                 <!--Footer-->
-                <div class="modal-footer"   >
+                <div class="modal-footer">
                     <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Fechar</button>
                 </div>
             </div>

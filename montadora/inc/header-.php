@@ -118,7 +118,7 @@ session_start();
 	else {
 	$resp = "Boa noite ";}
 	?>
-    <?php echo "<br> Olá  ".$_SESSION['sess_name_user'].""; 
+    <?php echo "<br> OlÃ¡  ".$_SESSION['sess_name_user'].""; 
 	?> 
 				<i class="fa fa-star"></i>
 			  	<i class="fa fa-star-o"></i>
